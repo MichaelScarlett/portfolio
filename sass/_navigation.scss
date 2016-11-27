@@ -1,14 +1,319 @@
+header {
+	position: relative;
+}
+
+#sub_title {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  // animation-iteration-count: infinite;
+}
+
+.animated.fadeIn {
+  padding: 2.5rem 0;
+}
+
+.overlay {
+	background: red;
+}
+
 ul.menu {
 	margin: 0;
 	padding: 0;
-	li {
-		display: inline;
-		margin-right: 10px;
-		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
+	justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    transition: all .4s;
+  li {
+    display: inline;
+    // margin-right: 10px;
+    padding: 0 1.5rem;
+    a {
+      // color: #333;
+      padding: 10px;
+      // color: transparent;
+      border: 1px solid transparent;
+      transition: all .4s;
+    }
+    i:hover {
+      // color: red;
+      cursor: pointer;
+      // background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+
 		}
 	}
 }
+
+// ul.menu span:hover {
+//   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+// }
+
+ul.menu i.fa.fa-circle.fa-stack-2x:hover {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  border: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  transition: all .4s;
+  i {
+    color: #FF1A00;
+    border: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  }
+}
+
+ul.menu i:hover {
+  color: #FF1A00;
+}
+
+.show-menu {
+            // display: block;
+            // right: 0;
+        }
+        #menuIcon {
+            // display:block;
+            font-size:3rem;
+            // position: fixed;
+            // top:3%;
+            // right:5%;
+            z-index:20;
+            color: red;
+        }
+        // #menu-menu1 {
+        //     box-shadow:none;
+        // }
+
+ul#menu-top-menu {
+  background-size:cover;
+  transition: all 1s;
+  position: relative; /* relative allows us to use T R B L */
+  // left:0; /* Set a default value of 0 so we can transition to -30% */
+}
+
+ul#menu-top-menu.menu {
+  // background: transparent;
+  list-style: none; 
+  padding: 0; 
+  // position: fixed;
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  top: -1.75%;
+  left: -25%;
+  margin: 0;
+  // transition:all 2s; 
+  display: flex;
+  flex-direction: row;
+  // display: none;
+}
+
+.menuHam {
+  padding: 20px;
+  display: flex;
+}
+
+#menuIcon {
+  padding: 10px;
+  // transition: all 1s;
+  border: 1px solid white;
+  background: transparent;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  align-self: center;
+  // transition: all .4s;
+  .fa {
+    color: red;
+    align-self: center;
+  }
+}
+
+#menuIcon.fa:hover {
+  color:  #FF1A00;
+}
+
+
+ul#menu-top-menu.menu a {
+  // border-bottom:1px solid grey;
+  display: block;
+  font-size: 1.5rem;
+  padding: 20px;
+  // transition:all 2s; /*we also transition the background colour here*/
+  // transition: color .25s linear;
+  border: none;
+}
+
+ul#menu-top-menu.show-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    // flex-direction: row;
+    left: 25%;
+    top: -1.75%;
+    background: transparent;
+    // height: 20vh;
+    // width: 100%;
+    // position: absolute;
+    transition: 1s;
+    cursor: pointer;
+    // position: fixed;
+  // position: relative;
+}
+
+// input[type="checkbox"] {
+//     display: none;
+// }    
+
+// input#toggle:checked + ul#menu-top-menu.menu {
+//   right:0; /* when the checkbox is checked, put the ul.nav back to right:0; It was at right:-30%;*/
+// }
+
+// /*
+//   ~ means grab the next eventual sibling
+// */
+// input#toggle:checked ~ ul#menu-top-menu.menu {
+//   left:-20%; /* When the input is checked, slide the wrapper over as well */
+// }
+
+// input#toggle {
+//   display: none; /* hide the input, we don't need to see it */
+// }
+
+// label[for="toggle"] {
+//   /*position the menu so that it doesn't slide off screen when we open it*/
+//   position: fixed;
+//   top:10px;
+//   left:10px;
+// }
+
+ul#menu-top-menu a:hover {
+    color: red;
+}
+
+ul#menu-main-menu.menu {
+  // padding: 2.5rem 0;
+}
+
+ul#menu-main-menu a {
+  transition: color .5s linear;
+}
+
+ul#menu-main-menu a:hover {
+    color: red;
+}
+
+#about_chev {
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  padding: 100px 0;
+  i {
+    color: white;
+  }
+}
+
+span .fa-stack.fa-lg {
+	position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+// span.fa-stack.fa-lg :hover {
+// 	color: red;
+// }
+
+i.fa.fa-circle.fa-stack-2x {
+	color: transparent;
+	border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.home__specials--box {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    img {
+    	height: 100px;
+    	width: 100px;
+    	max-width: 100%;
+    	background: white;
+    	padding: 15px;
+    }
+    h1 {
+    	text-transform: uppercase;
+    	font-size: 4rem;
+    	font-weight: 900;
+    	letter-spacing: 1.4rem;
+    	color: white;
+      margin: 0;
+      padding: 5rem 0 2.5rem 0;
+    }
+    p {
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: white;
+    }
+}
+
+
+/* code for animated blinking cursor */
+       .typed-cursor{
+           opacity: 1;
+           font-weight: 100;
+           -webkit-animation: blink 0.7s infinite;
+           -moz-animation: blink 0.7s infinite;
+           -ms-animation: blink 0.7s infinite;
+           -o-animation: blink 0.7s infinite;
+           animation: blink 0.7s infinite;
+       }
+       @-keyframes blink{
+           0% { opacity:1; }
+           50% { opacity:0; }
+           100% { opacity:1; }
+       }
+       @-webkit-keyframes blink{
+           0% { opacity:1; }
+           50% { opacity:0; }
+           100% { opacity:1; }
+       }
+       @-moz-keyframes blink{
+           0% { opacity:1; }
+           50% { opacity:0; }
+           100% { opacity:1; }
+       }
+       @-ms-keyframes blink{
+           0% { opacity:1; }
+           50% { opacity:0; }
+           100% { opacity:1; }
+       }
+       @-o-keyframes blink{
+           0% { opacity:1; }
+           50% { opacity:0; }
+           100% { opacity:1; }
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
